@@ -67,6 +67,7 @@
                 <a href="about.html">Acerca de</a>
                 <!-- <a href="blog.html">Blog</a> -->
                 <a href="testimonial.html">Reseñas</a>
+                <a href="javascript:void(0);" onclick="scrollToMenu()">Ver el menú</a>
               </div>
             </div>
           </div>
@@ -272,7 +273,7 @@
     </div>
   </section> -->
 
-  <section class="menu_section layout_padding">
+  <section id="menuSection" class="menu_section layout_padding">
     <div class="container">
       <div class="heading_container heading_center">
         <h2>Menú</h2>
@@ -719,6 +720,12 @@
   <!-- custom js -->
   <script src="js/custom.js"></script>
   <script>
+
+    function scrollToMenu() {
+      var menuSection = document.getElementById('menuSection');
+      menuSection.scrollIntoView({ behavior: 'smooth' });
+    }
+
     function pedirPorWhatsapp(mensaje) {
       var numeroWhatsApp = '+523314059277'; // Reemplaza 'tu_numero' con tu número de WhatsApp
       var mensajeWhatsApp = encodeURIComponent(mensaje);
